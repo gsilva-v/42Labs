@@ -1,0 +1,96 @@
+Method: GET
+URI: /carsdasd/1
+Time Resquest: Wed Feb 23 18:58:20 2022
+Response: {"status":"404"}
+Status: 404
+
+Method: GET
+URI: /char/1
+Time Resquest: Wed Feb 23 18:58:29 2022
+Response: {"id": 1, "name": "Audi", "price": 52642}
+Status: 200
+
+Method: GET
+URI: /cars
+Time Resquest: Wed Feb 23 18:58:33 2022
+Response: {{"id": 1, "name": "Audi", "price": 52642}, {"id": 2, "name": "Mercedes", "price": 57127}, {"id": 3, "name": "Chevette", "price": 9000}, {"id": 4, "name": "Volvo", "price": 29000}, {"id": 5, "name": "Bentley", "price": 350000}, {"id": 6, "name": "Citroen", "price": 21000}, {"id": 7, "name": "Hummer", "price": 41400}, {"id": 8, "name": "Volkswagen", "price": 21600}}
+Status: 200
+
+Method: POST
+URI: /cars
+Time Resquest: Wed Feb 23 19:00:19 2022
+Response: {"status":"200", "message": "success"}
+Status: 200
+
+Method: PUT
+URI: /cars/5
+Time Resquest: Wed Feb 23 19:00:48 2022
+Response: {"status":"200", "message": "success"}
+Status: 200
+
+Method: DELETE
+URI: /cars/3
+Time Resquest: Wed Feb 23 19:01:08 2022
+Response: {"status":"200", "message": "success"}
+Status: 200
+
+Method: GET
+URI: /char/3
+Time Resquest: Wed Feb 23 19:35:03 2022
+Response: {"id": {, "name": "{"id": {", "price": {"id": {, "name": "{"id": {"}
+Status: 200
+
+Method: GET
+URI: /char/3
+Time Resquest: Wed Feb 23 19:35:29 2022
+Response: {"id": {, "name": "{"id": {", "price": {"id": {, "name": "{"id": {"}
+Status: 200
+
+Method: GET
+URI: /char/3
+Time Resquest: Wed Feb 23 19:36:40 2022
+Response: {"id": {, "name": "{"id": {", "price": {"id": {, "name": "{"id": {"}
+Status: 200
+
+Method: GET
+URI: /char/3
+Time Resquest: Wed Feb 23 19:36:41 2022
+Response: {"id": {, "name": "{"id": {", "price": {"id": {, "name": "{"id": {"}
+Status: 200
+
+Method: GET
+URI: /char/3
+Time Resquest: Wed Feb 23 19:37:01 2022
+Response: {"id": 3, "name": "Chevette", "price": 9000}
+Status: 200
+
+Method: GET
+URI: /char/3
+Time Resquest: Wed Feb 23 19:37:12 2022
+Response: {"id": 3, "name": "Chevette", "price": 9000}
+Status: 200
+
+Method: GET
+URI: /char/3
+Time Resquest: Wed Feb 23 19:38:17 2022
+Response: {"id": 3, "name": "Chevette", "price": 9000}
+Status: 200
+
+Method: GET
+URI: /cars
+Time Resquest: Wed Feb 23 19:38:19 2022
+Response: {{"id": 1, "name": "Audi", "price": 52642}, {"id": 2, "name": "Mercedes", "price": 57127}, {"id": 3, "name": "Chevette", "price": 9000}, {"id": 4, "name": "Volvo", "price": 29000}, {"id": 5, "name": "Bentley", "price": 350000}, {"id": 6, "name": "Citroen", "price": 21000}, {"id": 7, "name": "Hummer", "price": 41400}, {"id": 8, "name": "Volkswagen", "price": 21600}}
+Status: 200
+
+Method: GET
+URI: /cars
+Time Resquest: Wed Feb 23 20:23:30 2022
+Response: {{"id": 1, "name": "Audi", "price": 52642}, {"id": 2, "name": "Mercedes", "price": 57127}, {"id": 3, "name": "Chevette", "price": 9000}, {"id": 4, "name": "Volvo", "price": 29000}, {"id": 5, "name": "Bentley", "price": 350000}, {"id": 6, "name": "Citroen", "price": 21000}, {"id": 7, "name": "Hummer", "price": 41400}, {"id": 8, "name": "Volkswagen", "price": 21600}}
+Status: 200
+
+Method: POST
+URI: /cars
+Time Resquest: Wed Feb 23 20:23:35 2022
+Response: {"status":"200", "message": "success"}
+Status: 200
+
