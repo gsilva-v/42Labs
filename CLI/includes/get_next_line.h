@@ -3,11 +3,9 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <errno.h>
-# include <api.h>
-# include <strings.h>
-# include <limits.h>
 # define BUFFER_SIZE 1
+
+
 /*
 	@param fd		File Descriptor
 	@param data		Where the buffer's content will stay.

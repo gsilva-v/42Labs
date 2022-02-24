@@ -4,7 +4,7 @@ This challenge is to build an api and a cli that accepts requests from clients.
 The intention of this is to take the first step towards the job market with 42.
 
 ## Tools
-I usaged whimsical to make the fluxogram: (https://whimsical.com/api-WLFKf9pTWGEZLiC4wSSpJQ)
+I usaged whimsical to make the fluxogram:
 
 ![Fluxograma](./img/fluxograma.png)
 
@@ -32,9 +32,13 @@ Usaged MySql Api with DataBase:
 
 # CLI
 ## How to install
+- Clone this repository.
+- Inside the cloned folder, change to folder CLI and execute 'make'.
+- After execute './cli' and CLI is ready.
 
 ### Executions
-
+- To see the logs, run command 'show', these will show all logs currently present.
+- To stop the Cli process, run command 'exit'. 
 
 ## Collaborators
 - Flavio (flda-sil).
