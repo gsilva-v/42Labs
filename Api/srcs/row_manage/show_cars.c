@@ -31,7 +31,7 @@ void	show_cars(struct mg_connection *c)
 	{
 		char *response = strdup(buffer);
 		mg_http_reply(c, status, NULL, response);
-		add_log("GET", "/cars", response, status);
+		add_log("GET", "/cars", status);
 		free(response);
 	}
 	else
@@ -39,7 +39,7 @@ void	show_cars(struct mg_connection *c)
 		char response[1024];
 		sprintf(response, "{\"status\": %d}", status);
 		mg_http_reply(c, status, NULL, response);
-		add_log("GET", "/cars", response, status);
+		add_log("GET", "/cars", status);
 	}
 	mysql_free_result(result);
 	free(buffer);

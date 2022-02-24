@@ -31,5 +31,5 @@ void delete_car(struct mg_http_message *request, struct mg_connection *conn)
 		sprintf(response, "%s", SUCCESS);
 		mg_http_reply(conn, 200, NULL, response);
 	}
-	add_log("DELETE", buffer, response, status);
+	add_log("DELETE", buffer, status);
 }

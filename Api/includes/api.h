@@ -18,7 +18,7 @@ typedef struct s_db_config{
 	char			*host;			// Host of api
 	char			*user;			// User who manages the database
 	char			*pass;			// The password of connection 
-	char			*dbname;	// The name of database
+	char			*dbname;		// The name of database
 	unsigned int	port;			// The door that allows access
  	char			*unix_socket;
 	int				flag;
@@ -45,51 +45,36 @@ void	seed_cars(void);
 	@brief This function show link of documentation when the client entry in path /
 */
 void	show_documentation(struct mg_http_message *request, struct mg_connection *conn);
-/*
-	@brief This function insert new row in any table of DataBase 
-*/
 int		create_row(char *table, char *key, char *value);
-/*
-	@brief This function insert new row in any table of DataBase 
-*/
-
 void	show_cars(struct mg_connection *c);
-/*
-	@brief This function insert new row in any table of DataBase 
-*/
-
 void	read_row(struct mg_connection *c, int id);
-/*
-	@brief This function insert new row in any table of DataBase 
-*/
-
 void input_car(struct mg_http_message *request, struct mg_connection *conn);
-/*
-	@brief This function insert new row in any table of DataBase 
-*/
-
 void refresh_row(struct mg_http_message *request, struct mg_connection *conn);
-/*
-	@brief This function insert new row in any table of DataBase 
-*/
-
 void delete_car(struct mg_http_message *request, struct mg_connection *conn);
+
 //-------- FINISH ROW MANAGE --------//
 //-------- ROUTE --------//
-
+/*
+	@brief This function manages what the API does, when to do it.
+*/
 void	route(struct mg_http_message *request, struct mg_connection *c);
+
+//-------- FINISH ROUTE --------//
 //-------- PARSE JSON --------//
 /*
 	@brief This function parse only json values and return values prepared to insert in row
-	@param Receive the full JSON object to parse this
+	@param Receive the full JSON object to parse this.
 */
 char	*formate_to_json(char *buffer, int i, char *row);
 
 
 //-------- FINISH PARSE JSON --------//
 //-------- LOG --------//
-void	add_log(char *method, char *route, char * response, int status);
 
+/*
+	@brief This function manage the log file.
+*/
+void	add_log(char *method, char *route, int status);
 
 //-------- FINISH LOG --------//
 

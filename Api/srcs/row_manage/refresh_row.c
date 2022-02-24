@@ -6,12 +6,10 @@ char	*get_old_values(int id)
 {
 	char statement[500];
 	char *converted_id = ft_itoa(id);
-	int status = 200;
 	char *buffer = strdup("{");
 
 	sprintf(statement, "SELECT * FROM cars WHERE id=%s", converted_id);
-	if (mysql_query(g_db_config.conn, statement))
-		status = 500;
+	mysql_query(g_db_config.conn, statement);		
 	MYSQL_RES *result = mysql_store_result(g_db_config.conn);
 	MYSQL_ROW row = mysql_fetch_row(result);
 
@@ -48,7 +46,7 @@ void refresh_row(struct mg_http_message *request, struct mg_connection *conn)
 	{
 		sprintf(response, VEHS_NOT_FOUND);
 		mg_http_reply(conn, 404, NULL, "%s", response);	
-		add_log("PUT", "/cars", response, 404);
+		add_log("PUT", "/cars", 404);
 		free(buffer);
 		return ;
 	}
@@ -67,5 +65,5 @@ void refresh_row(struct mg_http_message *request, struct mg_connection *conn)
 		sprintf(response, "%s", SUCCESS);
 		mg_http_reply(conn, 200, NULL, response);	
 	}
-	add_log("PUT", route, response, status);
+	add_log("PUT", route, status);
 }

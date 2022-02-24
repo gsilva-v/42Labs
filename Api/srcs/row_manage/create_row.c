@@ -44,5 +44,5 @@ void input_car(struct mg_http_message *request, struct mg_connection *conn)
 			status = 200;
 		}
 	}
-	add_log("POST", "/cars",  response, status);
+	add_log("POST", "/cars", status);
 }

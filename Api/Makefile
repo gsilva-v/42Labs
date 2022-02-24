@@ -2,7 +2,7 @@ NAME = server
 
 CC = gcc
 INCLUDE = -I ./includes/ -I /usr/local/mysql/include
-CFLAGS = -g $(INCLUDE)
+CFLAGS = -g $(INCLUDE) -Wall -Werror -Wextra
 MYSQL_FLAGS = -L/usr/local/mysql/lib -lmysqlclient
 
 RM = rm -rf
@@ -55,4 +55,6 @@ clean:
 fclean: clean
 	$(RM) $(NAME)	
 
-.PHONY: all  clean fclean $(NAME) $(PATH_OBJS)
+re: fclean all
+
+.PHONY: all  clean fclean $(PATH_OBJS) re

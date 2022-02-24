@@ -4,6 +4,7 @@ t__db_config	g_db_config;
 
 static void listener(struct mg_connection *c, int ev, void *ev_data, void *fn_data)
 {
+	(void)fn_data;
 	if (ev == MG_EV_HTTP_MSG) 
   	{
 		struct mg_http_message *request = (struct mg_http_message *) ev_data;
@@ -11,7 +12,7 @@ static void listener(struct mg_connection *c, int ev, void *ev_data, void *fn_da
 	}
 }
 
-int main(int argc, char *argv[])
+int main(void)
 {
 	struct mg_mgr manager;
 

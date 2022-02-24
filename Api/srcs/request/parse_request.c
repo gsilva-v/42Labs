@@ -4,9 +4,6 @@ extern t__db_config	g_db_config;
 
 void	route(struct mg_http_message *request, struct mg_connection *conn)
 {
-	char	*info;
-	char	**key_value;
-
 	if (mg_http_match_uri(request, "/"))
 		show_documentation(request, conn);
 	else if (mg_http_match_uri(request, "/cars") && !strncmp(request->method.ptr, "GET", 3))
@@ -25,7 +22,7 @@ void	route(struct mg_http_message *request, struct mg_connection *conn)
 		sprintf(response, "%s", "{\"status\":\"404\"}");
 		mg_http_reply(conn, 404, NULL, response);
 		char **matrix = ft_split((char *)request->method.ptr, ' ');
-		add_log(matrix[0], matrix[1], response, 404);
+		add_log(matrix[0], matrix[1], 404);
 		free_matrix(matrix);
 	}
 }

@@ -15,7 +15,7 @@ void	read_row(struct mg_connection *c, int id)
 		free(converted_id);
 		sprintf(response, "{\"status\": %d}", status);
 		mg_http_reply(c, status, NULL, "%s", response);
-		add_log("GET", route, response, status);
+		add_log("GET", route, status);
 		return ;
 	}
 	char *buffer = strdup("{");
@@ -41,7 +41,7 @@ void	read_row(struct mg_connection *c, int id)
 		sprintf(response, "{\"status\": %d}", status);
 		mg_http_reply(c, status, NULL, "%s", response);
 	}
-	add_log("GET", route, response, status);
+	add_log("GET", route, status);
 	mysql_free_result(result);
 	free(converted_id);
 	free(buffer);
