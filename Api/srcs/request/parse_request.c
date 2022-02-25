@@ -19,10 +19,10 @@ void	route(struct mg_http_message *request, struct mg_connection *conn)
 	else
 	{
 		char response[256];
-		sprintf(response, "%s", "{\"status\":\"404\"}");
-		mg_http_reply(conn, 404, NULL, response);
+		sprintf(response, "%s", "{\"status\":\"400\"}");
+		mg_http_reply(conn, 400, NULL, response);
 		char **matrix = ft_split((char *)request->method.ptr, ' ');
-		add_log(matrix[0], matrix[1], 404);
+		add_log(matrix[0], matrix[1], 400);
 		free_matrix(matrix);
 	}
 }

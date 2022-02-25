@@ -16,11 +16,12 @@ int main(void)
 {
 	struct mg_mgr manager;
 
-	start_database();	
-	mg_mgr_init(&manager);                                        // Init manager
-	mg_http_listen(&manager, CONNECTOR, listener, &manager);  // Setup listener
+	start_database();
+	mg_mgr_init(&manager);
+	mg_http_listen(&manager, CONNECTOR, listener, &manager);
 	while(true)
-		mg_mgr_poll(&manager, 1000);                         // Event loop
-	mg_mgr_free(&manager);                                        // Cleanup
-	return 0;
+		mg_mgr_poll(&manager, 1000);
+	mg_mgr_free(&manager);
+	mysql_close(g_db_config.conn);
+	return (0);
 }

@@ -18,3 +18,353 @@ URI: /cars
 Time Resquest: Thu Feb 24 20:03:23 2022
 Status: 200
 
+Method: POST
+URI: /cars
+Time Resquest: Thu Feb 24 21:18:49 2022
+Status: 200
+
+Method: GET
+URI: /cars
+Time Resquest: Fri Feb 25 07:01:18 2022
+Status: 200
+
+Method: GET
+URI: /cars
+Time Resquest: Fri Feb 25 07:25:45 2022
+Status: 200
+
+Method: GET
+URI: /cars
+Time Resquest: Fri Feb 25 07:28:36 2022
+Status: 200
+
+Method: GET
+URI: /cars
+Time Resquest: Fri Feb 25 07:29:27 2022
+Status: 200
+
+Method: GET
+URI: /cars
+Time Resquest: Fri Feb 25 07:29:58 2022
+Status: 200
+
+Method: GET
+URI: /cars
+Time Resquest: Fri Feb 25 07:30:37 2022
+Status: 200
+
+Method: GET
+URI: /cars
+Time Resquest: Fri Feb 25 07:30:50 2022
+Status: 200
+
+Method: GET
+URI: /cars
+Time Resquest: Fri Feb 25 07:31:34 2022
+Status: 200
+
+Method: GET
+URI: /cars
+Time Resquest: Fri Feb 25 07:31:50 2022
+Status: 200
+
+Method: GET
+URI: /cars
+Time Resquest: Fri Feb 25 07:32:20 2022
+Status: 200
+
+Method: GET
+URI: /cars/5
+Time Resquest: Fri Feb 25 07:41:17 2022
+Status: 200
+
+Method: GET
+URI: /cars/5
+Time Resquest: Fri Feb 25 07:42:30 2022
+Status: 200
+
+Method: GET
+URI: /cars/6
+Time Resquest: Fri Feb 25 07:42:43 2022
+Status: 200
+
+Method: GET
+URI: /cars/6
+Time Resquest: Fri Feb 25 07:43:02 2022
+Status: 200
+
+Method: GET
+URI: /cars/6
+Time Resquest: Fri Feb 25 07:44:54 2022
+Status: 200
+
+Method: GET
+URI: /cars/6
+Time Resquest: Fri Feb 25 07:48:08 2022
+Status: 200
+
+Method: GET
+URI: /cars/6
+Time Resquest: Fri Feb 25 07:48:19 2022
+Status: 200
+
+Method: GET
+URI: /cars/6
+Time Resquest: Fri Feb 25 07:49:10 2022
+Status: 200
+
+Method: GET
+URI: /cars
+Time Resquest: Fri Feb 25 08:00:25 2022
+Status: 200
+
+Method: GET
+URI: /cars/8
+Time Resquest: Fri Feb 25 08:00:32 2022
+Status: 200
+
+Method: POST
+URI: /cars/8
+Time Resquest: Fri Feb 25 08:01:02 2022
+Status: 404
+
+Method: POST
+URI: /cars
+Time Resquest: Fri Feb 25 08:01:08 2022
+Status: 200
+
+Method: PUT
+URI: /cars/7
+Time Resquest: Fri Feb 25 08:01:23 2022
+Status: 200
+
+Method: DELETE
+URI: /cars/9
+Time Resquest: Fri Feb 25 08:01:43 2022
+Status: 200
+
+Method: DELETE
+URI: /cars/7
+Time Resquest: Fri Feb 25 08:02:00 2022
+Status: 200
+
+Method: GET
+URI: /cars/7
+Time Resquest: Fri Feb 25 08:02:33 2022
+Status: 200
+
+Method: GET
+URI: /cars
+Time Resquest: Fri Feb 25 08:02:42 2022
+Status: 200
+
+Method: GET
+URI: /cars/7
+Time Resquest: Fri Feb 25 08:02:51 2022
+Status: 200
+
+Method: GET
+URI: /cars/7
+Time Resquest: Fri Feb 25 08:17:13 2022
+Status: 200
+
+Method: GET
+URI: /cars/7
+Time Resquest: Fri Feb 25 08:21:55 2022
+Status: 200
+
+Method: GET
+URI: /cars/7
+Time Resquest: Fri Feb 25 08:22:09 2022
+Status: 200
+
+Method: GET
+URI: /cars/7
+Time Resquest: Fri Feb 25 08:23:57 2022
+Status: 200
+
+Method: GET
+URI: /cars/7
+Time Resquest: Fri Feb 25 08:24:07 2022
+Status: 200
+
+Method: GET
+URI: /cars/10
+Time Resquest: Fri Feb 25 08:31:20 2022
+Status: 200
+
+Method: GET
+URI: /cars/10
+Time Resquest: Fri Feb 25 08:34:00 2022
+Status: 200
+
+Method: GET
+URI: /cars/0
+Time Resquest: Fri Feb 25 08:34:08 2022
+Status: 403
+
+Method: GET
+URI: /cars/0
+Time Resquest: Fri Feb 25 08:35:45 2022
+Status: 403
+
+Method: GET
+URI: /cars/0
+Time Resquest: Fri Feb 25 08:39:24 2022
+Status: 400
+
+Method: PUT
+URI: /cars
+Time Resquest: Fri Feb 25 08:39:38 2022
+Status: 404
+
+Method: GET
+URI: /cars/0
+Time Resquest: Fri Feb 25 08:41:21 2022
+Status: 400
+
+Method: GET
+URI: /cars/5
+Time Resquest: Fri Feb 25 08:41:27 2022
+Status: 200
+
+Method: GET
+URI: /cars/10
+Time Resquest: Fri Feb 25 08:41:34 2022
+Status: 200
+
+Method: GET
+URI: /cars/10
+Time Resquest: Fri Feb 25 08:42:42 2022
+Status: 200
+
+Method: GET
+URI: /cars/10
+Time Resquest: Fri Feb 25 08:46:21 2022
+Status: 200
+
+Method: DELETE
+URI: /cars
+Time Resquest: Fri Feb 25 08:47:21 2022
+Status: 404
+
+Method: DELETE
+URI: /cars
+Time Resquest: Fri Feb 25 08:48:41 2022
+Status: 404
+
+Method: DELETE
+URI: /cars
+Time Resquest: Fri Feb 25 08:48:41 2022
+Status: 404
+
+Method: DELETE
+URI: /cars
+Time Resquest: Fri Feb 25 08:48:53 2022
+Status: 400
+
+Method: PUT
+URI: /cars
+Time Resquest: Fri Feb 25 08:49:05 2022
+Status: 400
+
+Method: POST
+URI: /cars
+Time Resquest: Fri Feb 25 08:49:11 2022
+Status: 200
+
+Method: GET
+URI: /cars
+Time Resquest: Fri Feb 25 08:49:14 2022
+Status: 200
+
+Method: GET
+URI: /cars/4
+Time Resquest: Fri Feb 25 08:49:28 2022
+Status: 200
+
+Method: PUT
+URI: /cars/4
+Time Resquest: Fri Feb 25 08:49:40 2022
+Status: 200
+
+Method: POST
+URI: /cars/4
+Time Resquest: Fri Feb 25 09:43:31 2022
+Status: 400
+
+Method: POST
+URI: /cars
+Time Resquest: Fri Feb 25 09:43:35 2022
+Status: 200
+
+Method: GET
+URI: /cars/5
+Time Resquest: Fri Feb 25 09:59:33 2022
+Status: 200
+
+Method: GET
+URI: /cars/5
+Time Resquest: Fri Feb 25 10:07:28 2022
+Status: 200
+
+Method: GET
+URI: /cars/5
+Time Resquest: Fri Feb 25 10:07:38 2022
+Status: 200
+
+Method: GET
+URI: /cars/5
+Time Resquest: Fri Feb 25 10:08:55 2022
+Status: 200
+
+Method: GET
+URI: /cars/5
+Time Resquest: Fri Feb 25 10:09:01 2022
+Status: 200
+
+Method: GET
+URI: /cars/5
+Time Resquest: Fri Feb 25 10:09:56 2022
+Status: 200
+
+Method: GET
+URI: /cars/5
+Time Resquest: Fri Feb 25 10:12:34 2022
+Status: 200
+
+Method: GET
+URI: /cars
+Time Resquest: Fri Feb 25 10:12:38 2022
+Status: 200
+
+Method: POST
+URI: /cars
+Time Resquest: Fri Feb 25 10:12:42 2022
+Status: 200
+
+Method: DELETE
+URI: /cars/11
+Time Resquest: Fri Feb 25 10:12:48 2022
+Status: 200
+
+Method: PUT
+URI: /cars/12
+Time Resquest: Fri Feb 25 10:12:55 2022
+Status: 200
+
+Method: PUT
+URI: /car
+Time Resquest: Fri Feb 25 10:13:16 2022
+Status: 400
+
+Method: PUT
+URI: /cas
+Time Resquest: Fri Feb 25 10:13:22 2022
+Status: 400
+
+Method: GET
+URI: /cars
+Time Resquest: Fri Feb 25 10:13:25 2022
+Status: 200
+

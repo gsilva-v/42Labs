@@ -1,26 +1,51 @@
 #include <cli.h>
 
-void	show_log(FILE *file)
+int	refresh(int id)
 {
-	char buffer[3000];
+	FILE *file = fopen("../logs/log.txt", "r");
+	char buffer[300];
 	int divisor = 0;
-	int id = 0;
+	int counter = 0;
 	
-	printf("-------------------------------------------\n|\n");
-	printf("-------------------------------------------\n");
-	while (fgets(buffer, 3000, file))
+	while (counter < id)
 	{
-		printf("| %s", buffer);
+		fgets(buffer, 300, file);
 		if(divisor == 4)
 		{
-			printf("-------------------------------------------\n");
+			counter++;
+			divisor = 0;
+		}
+		else
+			divisor++;
+	}
+	id = show_log(file, id);
+	fclose(file);
+	return (id);
+}
+
+int	show_log(FILE *file, int id)
+{
+	char buffer[300];
+	int divisor = 0;
+	
+	printf("-------------------------------------------\n\n");
+	printf("-------------------------------------------\n");
+	while (fgets(buffer, 300, file))
+	{
+		if (strncmp(buffer, "Status", 6))
+			buffer[strlen(buffer)] = '\0';
+		printf("| %s", buffer);
+		if(divisor == 3)
+		{
 			printf("| Id Request: %d\n", id);
 			printf("-------------------------------------------\n\n");
 			printf("-------------------------------------------\n");
 			divisor = 0;
+			fgets(buffer, 300, file);
 			id++;
 		}
 		else
 			divisor++;
 	}
+	return (id);
 }

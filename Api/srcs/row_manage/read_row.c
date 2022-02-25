@@ -11,9 +11,9 @@ void	read_row(struct mg_connection *c, int id)
 	int status = 200;
 	if (!strcmp(converted_id, "0"))
 	{
-		status = 500;
+		status = 400;
 		free(converted_id);
-		sprintf(response, "{\"status\": %d}", status);
+		sprintf(response, "{\"status\": %d, \"message\": \"id need be a number greater than 0\"}", status);
 		mg_http_reply(c, status, NULL, "%s", response);
 		add_log("GET", route, status);
 		return ;

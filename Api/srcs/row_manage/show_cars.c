@@ -4,7 +4,6 @@ extern t__db_config	g_db_config;
 
 void	show_cars(struct mg_connection *c)
 {
-
 	int status = 200;
 	if (mysql_query(g_db_config.conn, "SELECT * FROM cars"))
 		status = 500;
@@ -14,7 +13,7 @@ void	show_cars(struct mg_connection *c)
 	int num_fields = mysql_num_fields(result);
 	
 	int first = 1;
-	char *buffer = strdup("{");
+	char *buffer = strdup("[");
 	
 	while ((row = mysql_fetch_row(result)))
 	{
@@ -26,7 +25,7 @@ void	show_cars(struct mg_connection *c)
 		first = 0;
 		buffer = ft_strjoin(buffer, "}");
 	}
-	buffer = ft_strjoin(buffer, "}");
+	buffer = ft_strjoin(buffer, "]");
 	if (status != 500)
 	{
 		char *response = strdup(buffer);

@@ -11,6 +11,7 @@
 	@brief This function show all log file in terminal
 	@param Get the file log opened
 */
-void	show_log(FILE *file);
+int	show_log(FILE *file, int id);
+int	refresh(int id);
 
 #endif

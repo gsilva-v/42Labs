@@ -14,5 +14,4 @@ void	add_log(char *method, char *route, int status)
         fprintf(file_log, "Status: %d\n\n", status);
         fclose(file_log);
     }
-	
 }
