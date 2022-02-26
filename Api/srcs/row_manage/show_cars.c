@@ -4,16 +4,16 @@ extern t__db_config	g_db_config;
 
 void	show_cars(struct mg_connection *c)
 {
-	int status = 200;
+	int	status = 200;
 	if (mysql_query(g_db_config.conn, "SELECT * FROM cars"))
 		status = 500;
 	MYSQL_RES *result = mysql_store_result(g_db_config.conn);
 	MYSQL_ROW row;
 	
-	int num_fields = mysql_num_fields(result);
+	int		num_fields = mysql_num_fields(result);
 	
-	int first = 1;
-	char *buffer = strdup("[");
+	int		first = 1;
+	char	*buffer = strdup("[");
 	
 	while ((row = mysql_fetch_row(result)))
 	{

@@ -4,16 +4,16 @@ extern t__db_config	g_db_config;
 
 char	*get_old_values(int id)
 {
-	char statement[500];
-	char *converted_id = ft_itoa(id);
-	char *buffer = strdup("{");
+	char		statement[500];
+	char		*converted_id = ft_itoa(id);
+	char		*buffer = strdup("{");
 
 	sprintf(statement, "SELECT * FROM cars WHERE id=%s", converted_id);
 	mysql_query(g_db_config.conn, statement);		
-	MYSQL_RES *result = mysql_store_result(g_db_config.conn);
-	MYSQL_ROW row = mysql_fetch_row(result);
+	MYSQL_RES	*result = mysql_store_result(g_db_config.conn);
+	MYSQL_ROW	row = mysql_fetch_row(result);
 
-	int num_fields = mysql_num_fields(result);
+	int			num_fields = mysql_num_fields(result);
 
 	for(int i = 0; i < num_fields && row; i++)
 		buffer = formate_to_json(buffer, i, row[i]);
@@ -24,7 +24,8 @@ char	*get_old_values(int id)
 
 int	update_row(char *table, int id, char *new_values)
 {
-	char buffer[1024];
+	char	buffer[1024];
+
 	sprintf(buffer, "UPDATE %s SET %s WHERE id=%d",  table, new_values, id);
 	if (mysql_query(g_db_config.conn, buffer))
 		return (1);
@@ -35,11 +36,11 @@ void refresh_row(struct mg_http_message *request, struct mg_connection *conn)
 {
 	t_car	car;
 	int		status = 200;
-	char values[250];
-	char route[110];
-	char response[1024];
-	int id = atoi(&request->method.ptr[10]);
-	char *buffer = get_old_values(id);
+	char	values[250];
+	char	route[110];
+	char	response[1024];
+	int		id = atoi(&request->method.ptr[10]);
+	char	*buffer = get_old_values(id);
 
 	sprintf(route, "/cars/%d", id);
 	if (!strcmp(buffer, "{}"))

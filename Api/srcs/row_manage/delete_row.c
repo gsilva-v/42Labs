@@ -5,7 +5,8 @@ extern t__db_config	g_db_config;
 
 int	delete_row(char *table, int id)
 {
-	char buffer[1024];
+	char	buffer[1024];
+
 	sprintf(buffer, "DELETE FROM %s WHERE id=%d", table, id);
 	if (mysql_query(g_db_config.conn, buffer))
 		return (1);

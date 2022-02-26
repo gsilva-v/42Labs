@@ -1,6 +1,6 @@
 #include <api.h>
 
-extern t__db_config g_db_config;
+extern t__db_config	g_db_config;
 
 void	start_database(void)
 {

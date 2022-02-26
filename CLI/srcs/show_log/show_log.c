@@ -2,11 +2,11 @@
 
 int	refresh(int id)
 {
-	FILE *file = fopen("../logs/log.txt", "r");
-	char buffer[300];
-	int divisor = 0;
-	int counter = 0;
-	
+	FILE	*file = fopen("../logs/log.txt", "r");
+	char	buffer[300];
+	int		divisor = 0;
+	int		counter = 0;
+
 	while (counter < id)
 	{
 		fgets(buffer, 300, file);

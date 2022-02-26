@@ -2,8 +2,8 @@
 
 void	add_log(char *method, char *route, int status)
 {
-    time_t curtime;
-    FILE *file_log = fopen("../logs/log.txt", "a");
+    time_t	curtime;
+    FILE	*file_log = fopen("../logs/log.txt", "a");
 
     time(&curtime);
     if (file_log != NULL)

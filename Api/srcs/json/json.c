@@ -2,7 +2,7 @@
 
 
 //    @brief    Returns the length of the json's key or value
-static int    attr_len(char *json_attr)
+static int	attr_len(char *json_attr)
 {
     int    index;
 
@@ -14,7 +14,7 @@ static int    attr_len(char *json_attr)
 }
 
 //    @brief    Given a json string on the format "key": "value" the key is returned
-static char    *get_key(char *json)
+static char	*get_key(char *json)
 {
     while (*json == ' ' || *json == '"' || *json == '{')
         json++;
@@ -22,7 +22,7 @@ static char    *get_key(char *json)
 }
 
 //    @brief    Given a json string on the format "key": "value" the value is returned
-static char    *get_value(char *json)
+static char	*get_value(char *json)
 {
     while (*json != ':')
         json++;
@@ -32,14 +32,14 @@ static char    *get_value(char *json)
     return (strndup(json, attr_len(json)));
 }
 
-void    convert_json_to_object(const char *json_obj, int qnt_prop, ...)
+void	convert_json_to_object(const char *json_obj, int qnt_prop, ...)
 {
-    char        **argv;
-    char        *key;
-    char        **value;
-    int            index;
-    va_list        ptr;
-    va_list        tmp;
+    char	**argv;
+    char	*key;
+    char	**value;
+    int		index;
+    va_list	ptr;
+    va_list	tmp;
 
     va_start(ptr, qnt_prop);
     va_copy(tmp, ptr);
@@ -53,9 +53,7 @@ void    convert_json_to_object(const char *json_obj, int qnt_prop, ...)
             value = va_arg(ptr, char **);
             char    *current_key = get_key(argv[index]);
             if (!strcmp(key, current_key))
-            {
                 *value = get_value(argv[index]);
-            }
             free(current_key);
         }
         va_copy(ptr, tmp);

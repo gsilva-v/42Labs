@@ -2,7 +2,7 @@
 
 char	*formate_to_json(char *buffer, int i, char *row)
 {
-	char *temp = strdup("");
+	char	*temp = strdup("");
 
 	if (i == 0)
 		temp = ft_strjoin(strdup("\"id\": "), (row));

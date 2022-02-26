@@ -19,15 +19,15 @@ PATH_MNG = $(PATH_SRCS)row_manage/
 PATH_UTILS = $(PATH_SRCS)utils/
 PATH_OBJS = ./objs/
 
-SRCS =	$(PATH_MAIN)main.c\
-		$(PATH_DB)start_database.c $(PATH_DB)create_table.c\
-		$(PATH_JSON)json.c $(PATH_JSON)formate_to_json.c\
-		$(PATH_LOG)add_log.c\
-		$(PATH_LIB)mongoose.c\
-		$(PATH_MNG)create_row.c $(PATH_MNG)show_cars.c $(PATH_MNG)read_row.c\
-		$(PATH_MNG)refresh_row.c $(PATH_MNG)delete_row.c $(PATH_MNG)show_documentation.c\
-		$(PATH_REQ)parse_request.c\
-		$(PATH_UTILS)ft_itoa.c $(PATH_UTILS)ft_split.c $(PATH_UTILS)ft_strjoin.c\
+SRCS =	$(PATH_MAIN)main.c \
+		$(PATH_DB)start_database.c $(PATH_DB)create_table.c \
+		$(PATH_JSON)json.c $(PATH_JSON)formate_to_json.c \
+		$(PATH_LOG)add_log.c \
+		$(PATH_LIB)mongoose.c \
+		$(PATH_MNG)create_row.c $(PATH_MNG)show_cars.c $(PATH_MNG)read_row.c \
+		$(PATH_MNG)refresh_row.c $(PATH_MNG)delete_row.c $(PATH_MNG)show_documentation.c \
+		$(PATH_REQ)parse_request.c \
+		$(PATH_UTILS)ft_itoa.c $(PATH_UTILS)ft_split.c $(PATH_UTILS)ft_strjoin.c \
 		$(PATH_UTILS)free_matrix.c
 
 OBJS = $(patsubst $(PATH_SRCS)%.c, $(PATH_OBJS)%.o, $(SRCS))

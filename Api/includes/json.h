@@ -1,16 +1,8 @@
 #ifndef JSON_H
-#define JSON_H
-#include <stdarg.h>
-#include <stdio.h>
-#include <string.h>
-#include <strings.h>
-#include <api.h>
-
-typedef struct s_car
-{
-    char    *name;
-    char    *price;
-} t_car;
+# define JSON_H
+# include <stdarg.h>
+# include <strings.h>
+# include <api.h>
 
 /*
     @brief            Convert a json object to a C struct.

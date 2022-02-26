@@ -62,8 +62,8 @@ void    get_line(t_buffer *buffer)
 
 char    *get_next_line(int fd)
 {
-    static t_buffer    list[255];
-    t_buffer        *buffer;
+    static		t_buffer    list[255];
+    t_buffer	*buffer;
 
     if (fd < 0 || fd > 255)
         return (0);

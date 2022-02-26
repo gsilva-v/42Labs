@@ -4,6 +4,7 @@
 int wait_cmd(char *buffer, int id)
 {
 	FILE	*file;
+
 	if (buffer)
 	{
 		if (!strncmp(buffer, "show", 4))
@@ -28,8 +29,8 @@ int wait_cmd(char *buffer, int id)
 
 int	main(void)
 {
-	char	*buffer;
-	static int id = 0;
+	char		*buffer;
+	static int	id = 0;
 
 	system("clear");
 	while (true)

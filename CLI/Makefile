@@ -13,8 +13,8 @@ PATH_SHOW = $(PATH_SRCS)show_log/
 
 PATH_OBJS = ./objs/
 
-SRCS =  $(PATH_MAIN)main.c\
-		$(PATH_GNL)gnl.c\
+SRCS =  $(PATH_MAIN)main.c \
+		$(PATH_GNL)gnl.c \
 		$(PATH_SHOW)show_log.c
 
 OBJS = $(patsubst $(PATH_SRCS)%.c, $(PATH_OBJS)%.o, $(SRCS))

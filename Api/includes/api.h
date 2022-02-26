@@ -2,14 +2,14 @@
 # define API_H
 # include <mongoose.h>
 # include <mysql/mysql.h>
+# include <json.h>
+# include <defines.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
 # include <fcntl.h>
 # include <time.h>
-# include <json.h>
-# include <defines.h>
 
 /*
 	@brief	This is database configuration
@@ -24,6 +24,12 @@ typedef struct s_db_config{
 	int				flag;
 	MYSQL			*conn;			// The connection 
 }	t__db_config;
+
+typedef struct s_car
+{
+    char    *name;
+    char    *price;
+} t_car;
 
 //-------- DATABASE --------//
 /*
@@ -66,7 +72,6 @@ void	route(struct mg_http_message *request, struct mg_connection *c);
 	@param Receive the full JSON object to parse this.
 */
 char	*formate_to_json(char *buffer, int i, char *row);
-
 
 //-------- FINISH PARSE JSON --------//
 //-------- LOG --------//

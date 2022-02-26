@@ -4,21 +4,23 @@ extern t__db_config	g_db_config;
 
 void	read_row(struct mg_connection *c, int id)
 {
-	char response[1024];
-	char statement[500];
-	char *converted_id = ft_itoa(id);
-	char *route = ft_strjoin(strdup("/cars/"), converted_id);
-	int status = 200;
+	char	response[1024];
+	char	statement[500];
+	char	*converted_id = ft_itoa(id);
+	char	*route = ft_strjoin(strdup("/cars/"), converted_id);
+	int		status = 200;
+
 	if (!strcmp(converted_id, "0"))
 	{
 		status = 400;
-		free(converted_id);
 		sprintf(response, "{\"status\": %d, \"message\": \"id need be a number greater than 0\"}", status);
 		mg_http_reply(c, status, NULL, "%s", response);
 		add_log("GET", route, status);
+		free(converted_id);
+		free(route);
 		return ;
 	}
-	char *buffer = strdup("{");
+	char	*buffer = strdup("{");
 	
 	sprintf(statement, "SELECT * FROM cars WHERE id=%s", converted_id);
 	if (mysql_query(g_db_config.conn, statement))

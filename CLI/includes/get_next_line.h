@@ -5,7 +5,6 @@
 # include <stdlib.h>
 # define BUFFER_SIZE 1
 
-
 /*
 	@param fd		File Descriptor
 	@param data		Where the buffer's content will stay.
