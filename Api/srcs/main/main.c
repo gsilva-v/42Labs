@@ -8,6 +8,7 @@ static void listener(struct mg_connection *c, int ev, void *ev_data, void *fn_da
 	if (ev == MG_EV_HTTP_MSG) 
   	{
 		struct mg_http_message *request = (struct mg_http_message *) ev_data;
+		printf("%s\n", request->method.ptr);
 		route(request, c);
 	}
 }
